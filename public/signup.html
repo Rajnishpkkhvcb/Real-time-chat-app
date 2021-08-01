@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	/*add full-width input fields*/
+	body{
+		background-color:black;
+	}
+	input[type=text],
+	input[type=password],
+	input[type=Number]
+	 {
+		width:100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 2px solid orangered;
+		box-sizing: border-box;
+        border-radius: 5px;
+	}
+
+	label
+	{
+		color:orangered;
+	}
+
+    p{
+        color: white;
+    }
+
+	h2
+	{
+		color:orangered;
+		font-size: 30px;
+        margin-top: 50px;
+		margin-left: 40%;
+        margin-bottom: 30px;
+	}
+	button {
+		background-color:orangered;
+		color: white;
+		padding: 15px 20px;
+		margin: 15px 0;
+		
+        border-color: solid orangered;
+        border-radius:10px;;
+	}
+
+    .box{
+        border-radius: 10px;
+        width: 500px;
+        background-color: black;
+        margin-left: 28%;
+        margin-right: 20%;
+        box-shadow: 0.2px 0.2px 1px 1px burlywood;
+    }
+	
+	
+	.signupbtn {
+		float: left;
+		width: 100%;
+
+	}
+	
+	
+	.container {
+		padding: 16px;
+	}
+	/*clear floats*/
+	
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+	/*styles for cancel button and signup button
+	on extra small screens*/
+	
+	@media screen and (max-width: 300px) {
+		.cancelbtn,
+		.signupbtn {
+            margin: 0%;
+			width: 100%;
+		}
+
+
+	}
+
+    .login{
+        margin-left: 200px;
+        color: orangered;
+    }
+    .login-link{
+        color: white;
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+
+	<h2>Welcome </h2>
+	<!--Step 1:Adding HTML-->
+    <div class="box">
+        
+	<form method="POST" onsubmit="signup(event)" >
+		<div class="container">
+			<label><b>Name</b></label>
+			<input id="namee" type="text" placeholder="Enter Your Name" name="namee" required>
+
+			<label><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" name="email" required>
+
+			<label><b>Phone Number</b></label><br><br>
+			<input type="Number" placeholder="Phone Number" name="phone" required>
+			
+			<label><br>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+			<div class="clearfix">
+				
+				<button type="submit" class="signupbtn" >Register</button>
+			</div>
+		</div>
+
+	</form>
+    <div class="login">Already a user? <a href='../login/login.html' class="login-link">Login</a></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+<script src="client.js"></script>
+</body>
+
+
+</html>
